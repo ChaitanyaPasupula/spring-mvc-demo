@@ -7,24 +7,28 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Sans America</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css"  href="${pageContext.request.contextPath}/resources/css/mytest.css">
+ <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/my-test.css">
+<style type="text/css">
+          
+</style>
 </head>
 
 <body class="container" >
 
- <div >
+ <div align="center" >
   <h2>Welcome to Sans Amercia Inc.</h2>
   <h6>IT Staffing and Services.</h6>
   </div>
   
   
-  <div class="jumbotron">
+  <div class="form">
    <h4>User Login</h4><br><br>
   <form:form action="processForm" modelAttribute="student">
   
    User Name: <form:input type="text"  path="Name"  />
    <br><br>
    Password: <form:input type="password"  path="password" />
+   <form:errors path="password" cssClass="error"></form:errors>
    <br><br>
    Visa: <form:select   path="visaStatus"><form:options items="${student.visaTypes }"/></form:select>
    <br><br>

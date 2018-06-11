@@ -2,11 +2,16 @@ package com.spring.controllers;
 
 import java.util.LinkedHashMap;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class Student {
 	
 	
 	private String Name;
 	
+	@NotNull
+	@Size(min=1,message="is required")
 	private String password;
 	
 	private LinkedHashMap<String,String> visaTypes;
